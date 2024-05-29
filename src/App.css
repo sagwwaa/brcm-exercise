@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: #005c8a;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a:hover {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #ce0930;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input[type=checkbox] {
+  accent-color: #ce0930;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left-column {
+  background-color: #fff;
+  flex: 1;
+}
+
+.right-column {
+  background-color: #fff;
+  flex:2;
+}
+
+/* list ***************/
+.list-container {
   display: flex;
   flex-direction: column;
+}
+
+.list-item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.list-left-column {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  padding-right: 10px;
+  padding-top:15px;
+}
+
+.list-right-column {
+  flex: 1;
+}
+
+.list-left-column input[type="checkbox"] {
+  margin-top: 8px;
+}
+
+/* filter *************************/
+.filter-container h4 {
+  color: #ce0930;
+}
+
+.filter-container .clearall {
+  font-weight: bold;
+}
+
+.filter-container.open {
+  display: block;
+}
+
+.filter-row {
+  display: flex;
   align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  
+}
+
+.filter-column {
+  padding: 0 10px;
+}
+
+.filter-checkbox-column {
+  flex: 0 0 20px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.filter-title-column {
+  flex: 1;
+}
+
+.filter-badge-column {
+  flex: 0 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge {
+  background-color: #878787;
   color: white;
+  padding: 5px 20px;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle-button {
+  display: none;
+  border: 0;
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .column {
+      flex: 100%; /* On smaller screens, columns will stack */
   }
-  to {
-    transform: rotate(360deg);
+
+  .filter-container {
+    display: none;
   }
+
+  .toggle-button {
+    display: block;
+  }
+
 }
+

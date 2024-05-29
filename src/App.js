@@ -1,23 +1,41 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './App.css';
+import ListComponent from './components/list';
+import FiltersComponent from './components/filters';
+
 
 function App() {
+  const url = "http://localhost:5001/api/test";
+
+  const [data, setData] = useState(null); // state for api data
+  const [filters, setFilters] = useState([]); // state for selected  filters
+
+  const updateFilterState = (newValue) => {
+    setFilters(newValue); // callback function to update the shared state
+  };
+  
+  useEffect(() => {
+    // Make an API call
+    axios.get(url)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <div class="container">
+        <div class="column left-column">
+          <FiltersComponent jsonData={data} filterData={filters} setFilters={updateFilterState} />
+        </div>
+        <div class="column right-column">
+          <ListComponent jsonData={data} filterData={filters} />            
+        </div>
+      </div>
     </div>
   );
 }

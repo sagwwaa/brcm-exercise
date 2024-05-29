@@ -1,0 +1,82 @@
+{
+    "filters":[
+       {
+          "label":"Host Bus Type",
+          "attribute":"host_bus_type"
+       },
+       {
+          "label":"External Ports",
+          "attribute":"external_ports"
+       },
+       {
+          "label":"Internal Ports",
+          "attribute":"internal_ports"
+       }
+    ],
+    "products":[
+       {
+          "content_id":"blt4403b094ad09c264_en-us",
+          "content_type":"storage",
+          "part_number":"HBA 9502-16i Tri-Mode OCP 3.0 Storage Adapter",
+          "product_summary":"PCIe Gen 4.0 Tri-Mode HBA OCP 3.0 SFF storage adapters utilizes a NIC small form factor for more flexibility when integrating storage into the server",
+          "filter_values":{
+             "host_bus_type":"x8 lane PCI Express 4.0",
+             "external_ports":null,
+             "internal_ports":"16"
+          },
+          "url":"/products/storage/host-bus-adapters/sas-nvme-9502-16i"
+       },
+       {
+          "content_id":"bltc56908b7e0876008_en-us",
+          "content_type":"storage",
+          "part_number":"HBA 9500-16e Tri-Mode Storage Adapter",
+          "product_summary":"PCIe Gen 4.0 HBA enables servers to seamlessly operate with any of the SAS, SATA or NVMe storage devices ",
+          "oem":null,
+          "filter_values":{
+             "host_bus_type":"x8 lane PCI Express 4.0",
+             "external_ports":"16",
+             "internal_ports":null
+          },
+          "url":"/products/storage/host-bus-adapters/sas-nvme-9500-16e"
+       },
+       {
+          "content_id":"blt1e9dd1ae2734f141_en-us",
+          "content_type":"storage",
+          "part_number":"HBA 9500-8i Tri-Mode Storage Adapter",
+          "product_summary":"PCIe Gen 4.0 HBA provides high bandwidth and unprecedented flexibility to today\u2019s expanding data centers with Tri-Mode connectivity and NVMe devices",
+          "oem":null,
+          "filter_values":{
+             "host_bus_type":"x8 lane PCI Express 4.0",
+             "external_ports":null,
+             "internal_ports":"8"
+          },
+          "url":"/products/storage/host-bus-adapters/sas-nvme-9500-8i"
+       },
+       {
+          "content_id":"blteabcefa807f97066_en-us",
+          "content_type":"storage",
+          "part_number":"HBA 9500-8e Tri-Mode Storage Adapter",
+          "product_summary":"PCIe Gen 4.0 HBA enables customers to integrate into U.3 backplanes utilizing UBM for maximum and configuration options",
+          "oem":null,
+          "filter_values":{
+             "host_bus_type":"x8 lane PCI Express 4.0",
+             "external_ports":"8",
+             "internal_ports":null
+          },
+          "url":"/products/storage/host-bus-adapters/sas-nvme-9500-8e"
+       },
+       {
+          "content_id":"blt51328eb6a4267713_en-us",
+          "content_type":"storage",
+          "part_number":"HBA 9500-16i Tri-Mode Storage Adapter",
+          "product_summary":"Create endless design flexibility with Tri-Mode connectivity and NVMe performance benefits with PCIe 4 HBA",
+          "oem":null,
+          "filter_values":{
+             "host_bus_type":"x8 lane PCI Express 4.0",
+             "external_ports":null,
+             "internal_ports":"16"
+          },
+          "url":"/products/storage/host-bus-adapters/sas-nvme-9500-16i"
+       }
+    ]
+ }
